@@ -7,7 +7,8 @@ try :
     import mechanize
     import cookielib
 except:
-    print "Unable to import mechanize ! Please install the library 'mechanize'!"
+    print "Mechanize library not installed!"
+    exit()
 
 
 
@@ -17,8 +18,6 @@ start_dob = datetime.datetime(1999, 01, 01, 00, 00, 00)      #date in (yyyy, mm,
 end_dob = datetime.datetime(2000, 01, 01, 00, 00, 00)        #date in (yyyy, mm, dd, hh, mm, ss)
 starting_reg_no = int(raw_input('Input starting Reg. No.: '))
 ending_reg_no = int(raw_input('Input ending Reg. No.: '))
-#starting_reg_no = 5371093
-#ending_reg_no = 5371524
 website_url = 'http://cbseresults.nic.in/class10/cbse102015_all.htm'
 
 
@@ -134,3 +133,6 @@ while starting_reg_no <= ending_reg_no:
 
     #DOB loop ends
 #AdmNo loop ends
+
+print '\n'
+print "Finished!"
